@@ -4,8 +4,61 @@
   box-sizing: border-box;
 }
 
+.grid-container {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  /* text-align: center; */
+}
+
 body {
   font: 13px Helvetica, Arial;
+}
+
+.buttonB {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.buttonB:hover {background-color: #3e8e41}
+
+.buttonB:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.container {
+  text-align: center;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.logo {
+  margin: 3px;
+  height: 7%;
+  width: 7%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.one {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .chat {
@@ -15,6 +68,13 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: row;
+}
+
+.transfer-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
 }
 
 .side-panel {
@@ -40,11 +100,12 @@ body {
 
 .panel-link {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .main-panel {
-  background: linear-gradient(180deg, #c5c5d4 0%, #b3b3c4 100%);
+  background: linear-gradient(180deg, #9ebee7 0%, #e0bdfc 100%);
   padding: 2%;
   width: 100%;
 }
@@ -78,11 +139,38 @@ body {
 
 .chat-details {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
 }
 
-form {
+#transfer-form {
+  border: 1px solid grey;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 320px;
+  width: calc(98% - 360px);
+}
+
+#transfer-form input {
+  border: 0;
+  outline: none;
+  padding: 20px;
+  width: calc(94% - 120px);
+}
+
+#transfer-form button {
+  color: white;
+  background: url('./assets/send-icon.png');
+  background-size: contain;
+  border: none;
+  margin: 10px;
+  padding: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+#form {
   border-top: 1px solid grey;
   background: #fff;
   display: flex;
@@ -93,7 +181,7 @@ form {
   width: calc(98% - 360px);
 }
 
-form input {
+#form input {
   border: 0;
   outline: none;
   padding: 20px;
@@ -105,7 +193,7 @@ input::placeholder {
   font-style: italic;
 }
 
-form button {
+#form button {
   color: white;
   background: url('./assets/send-icon.png');
   background-size: contain;
@@ -229,12 +317,58 @@ form button {
   font-size: 14px;
 }
 
+.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.frame {
+  width: 70%;
+  padding-left: 3vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.hmart {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid white;
+  background: linear-gradient(180deg, #b9a6ff 0%, #a0d7f7 100%);
+  margin: 0;
+}
+
+.panels {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid white;
+  background: linear-gradient(180deg, #a0d7f7 0%, #b9a6ff 100%);
+  margin: 0;
+}
+
+
+.productDetails{
+  display: inline-flex;
+}
+
+.unorderedList {
+font-weight: bold;
+font-size: 20px;
+right: 200px;
+
+}
+
 /* reorganize our chat layout on smaller width screens */
 @media screen and (max-width: 1024px) {
   .chat {
     background: linear-gradient(180deg, #c5c5d4 0%, #b3b3c4 100%);
     flex-direction: column;
     justify-content: start;
+  }
+
+  .productDetails{
+    display: inline;
   }
 
   .main-panel {
@@ -249,10 +383,12 @@ form button {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background: #fafbff;
   }
 
   .side-panel #title {
     margin: 18px 0;
+
   }
 
   .side-panel ul {
@@ -265,7 +401,7 @@ form button {
     height: calc(100% - 80px);
   }
 
-  form {
+  #form {
     border-top: none;
     left: 2%;
     width: 96%;
