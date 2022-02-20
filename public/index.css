@@ -325,10 +325,28 @@ input::placeholder {
 }
 
 .frame {
+  width: 70%;
   padding-left: 3vw;
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
+
+.hmart {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid white;
+  background: linear-gradient(180deg, #b9a6ff 0%, #a0d7f7 100%);
+  margin: 0;
+}
+
+.panels {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid white;
+  background: linear-gradient(180deg, #a0d7f7 0%, #b9a6ff 100%);
+  margin: 0;
+}
+
 
 .productDetails{
   display: inline-flex;
@@ -365,10 +383,12 @@ right: 200px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background: #fafbff;
   }
 
   .side-panel #title {
     margin: 18px 0;
+
   }
 
   .side-panel ul {
