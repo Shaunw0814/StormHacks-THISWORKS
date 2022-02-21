@@ -59,7 +59,7 @@ After running your server, it will prompt you to configure your chat, e.g.
 ![Set up](images/initalize.jpg)
 If everything was configured properly, the chat should now open at a random port location.
 
-You can additionally run another instance of the chat application by creating a new terminal, and running the application again. This will find another unused, random port location, and deploy multiple instances to your local machine. With the environment configurability, you can test out multi-client chats.
+You can additionally run another instance of the chat application by creating a new terminal, and running the application again. This will find another unused, random port location, and deploy multiple instances to your local machine. With the environment configurability, you can now test out multi-client chats.
 
 ### LICENSE
 
