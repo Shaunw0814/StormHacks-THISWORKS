@@ -36,7 +36,7 @@ TOPIC_ID=0.0.28583
 ```
 The `TOPIC_ID` is used when connecting to an existing topic. If you don't have one, you can leave it as is.
 
-After downloading and setting up our environment, we'll install our packages via [npm](https://docs.npmjs.com/about-npm/).
+After downloading and setting up your environment, we'll install our packages via [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install
